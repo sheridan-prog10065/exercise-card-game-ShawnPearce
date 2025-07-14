@@ -5,17 +5,21 @@
 	<Grid RowDefinitions="100,Auto,*,Auto" ColumnDefinitions="*,2*,*">
 		
 		<!--Fixed size Player/House Score-->
+		
 		<Border Grid.Row="0" Grid.Column="0" WidthRequest="110" StrokeThickness="5">
 		<Entry Text="30" x:Name="_txtPlayerScore" HorizontalOptions="Fill" VerticalOptions="Fill" HorizontalTextAlignment="Center" FontSize="40"/>
 		</Border>
 		<Border Grid.Row="0" Grid.Column="2" WidthRequest="110" StrokeThickness="5">
 			<Entry Text="4" x:Name="_txtHouseScore" HorizontalOptions="Fill" VerticalOptions="Fill" HorizontalTextAlignment="Center" FontSize="40"/>
 		</Border>
-		<!--Card Game Title - Spans across all 3 columns but is centered horizontally-->
 		
+		<!--Card Game Title - Spans across all 3 columns but is centered horizontally-->
+		<Label Grid.Row="0" Grid.ColumnSpan="3" Text="Card Game" HorizontalOptions="Center" FontSize="50"  VerticalTextAlignment="Center"/>
 		
 		<!-- Game Buttons (Deal,Switch,Play)-->
-		
+		<Button x:Name="_btnDealCards" Text="Deal" Grid.Row="1" Grid.Column="0" Margin="10" HeightRequest="50" WidthRequest="200"/>
+		<Button x:Name="_btnSwitchCards" Text="Switch" Grid.Row="1" Grid.Column="1" Margin="10" HeightRequest="50" WidthRequest="200"/>
+		<Button x:Name="_btnPlayCards" Text="Play" Grid.Row="1" Grid.Column="2" Margin="10" HeightRequest="50" WidthRequest="200"/>
 		
 		<!-- Card Display Area 1 card in first cell one in last cell-->
 		
