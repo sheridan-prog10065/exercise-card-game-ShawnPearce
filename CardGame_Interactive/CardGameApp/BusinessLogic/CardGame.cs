@@ -1,47 +1,27 @@
-using Foundation;
-
 namespace CardGameApp.BusinessLogic;
 
 public class CardGame
 {
     //Declare all the field variables
     private CardDeck _cardDeck;
-    private GameScore _score;
-    private Card _playerCard;
-    private Card _houseCard;
-    
+
     public CardGame()
     {
         _cardDeck = new CardDeck();
-        _score = new GameScore();
-        _playerCard = null;
-        _houseCard = null;
+        Score = new GameScore();
+        PlayerCard = null;
+        HouseCard = null;
     }
 
-    public GameScore Score
-    {
-        get { return _score; }
-    }
-    public Card PlayerCard
-    {
-        get { return _playerCard; }
-    }
-    public Card HouseCard
-    {
-        get { return _houseCard; }
-    }
+    public GameScore Score { get; }
 
-    public bool PlayerWins
-    {
-        get { return false; }
-    }
-        public bool HouseWins
-    {
-        get { return false;}
-    }
+    public Card PlayerCard { get; }
 
-    public bool IsOver
-    {
-        get { return false; }
-    }
+    public Card HouseCard { get; }
+
+    public bool PlayerWins => false;
+
+    public bool HouseWins => false;
+
+    public bool IsOver => false;
 }
