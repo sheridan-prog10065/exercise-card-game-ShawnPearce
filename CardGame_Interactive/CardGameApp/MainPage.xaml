@@ -5,8 +5,12 @@
 	<Grid RowDefinitions="100,Auto,*,Auto" ColumnDefinitions="*,2*,*">
 		
 		<!--Fixed size Player/House Score-->
-		
-		
+		<Border Grid.Row="0" Grid.Column="0" WidthRequest="110" StrokeThickness="5">
+		<Entry Text="30" x:Name="_txtPlayerScore" HorizontalOptions="Fill" VerticalOptions="Fill" HorizontalTextAlignment="Center" FontSize="40"/>
+		</Border>
+		<Border Grid.Row="0" Grid.Column="2" WidthRequest="110" StrokeThickness="5">
+			<Entry Text="4" x:Name="_txtHouseScore" HorizontalOptions="Fill" VerticalOptions="Fill" HorizontalTextAlignment="Center" FontSize="40"/>
+		</Border>
 		<!--Card Game Title - Spans across all 3 columns but is centered horizontally-->
 		
 		
