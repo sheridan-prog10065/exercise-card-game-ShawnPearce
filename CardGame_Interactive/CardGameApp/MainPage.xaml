@@ -22,13 +22,18 @@
 		<Button x:Name="_btnPlayCards" Text="Play" Grid.Row="1" Grid.Column="2" Margin="10" HeightRequest="50" WidthRequest="200"/>
 		
 		<!-- Card Display Area 1 card in first cell one in last cell-->
-		
+		<Image x:Name="_imgPlayerCard" Grid.Row = "2" Grid.Column="0" Source="playing_card_back.jpg" Margin="20"/>
+		<Image x:Name="_imgHouseCard" Grid.Row = "2" Grid.Column="2" Source="playing_card_back.jpg" Margin="20"/>
 		
 		<!-- Text Area for messages (Player Wins)-->
 		
+		<Border Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" HeightRequest="150" WidthRequest="320" StrokeThickness="5" >
+		<Label  Text="Player Wins"  FontSize="50" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+		</Border>
 		
 		<!--Bottom row for Player and House Titles-->
-		
+		<Label Text="Player" Grid.Row="3" Grid.Column="0" FontSize="40" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+		<Label Text="House" Grid.Row="3" Grid.Column="3" FontSize="40" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
 		
 		
 	</Grid>
