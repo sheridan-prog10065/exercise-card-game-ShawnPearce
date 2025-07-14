@@ -3,6 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CardGameApp.MainPage">
 			 
-	<Label Text="Template project for the Interactive Card Game Exercise"
-	       HorizontalOptions="Center" VerticalOptions="Center"/>
+	<Grid RowDefinitions="100,Auto,*,Auto" ColumnDefinitions="*,2*,*">
+		
+		<!-- CARD GAME TITLE-->
+		<Label Text="Card Game" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontSize="30"/>
+		
+		<!-- Score-->
+		
+			<Entry Grid.Row="0" Grid.Column ="0" x:Name="_txtPlayerScore" />
+	
+		
+		<Border Grid.Row="0" Grid.Column ="2">
+				<Entry x:Name="_txtHouseScore"/>
+			</Border>
+		
+		<!--Game Buttons-->
+		<Button x:Name = "_btnDeal" Grid.Row="1" Grid.Column="0" Text="Deal" FontSize="17" />
+		<Button x:Name = "_btnSwitch" Grid.Row="1" Grid.Column="1" Text="Switch" FontSize="17"/>
+		<Button x:Name = "_btnPlay" Grid.Row="1" Grid.Column="2" Text="Play" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+
+		<!--Cards, Gameboard-->
+		<Image x:Name="_imgPlayerCard" Grid.Row="2" Grid.Column="0" Source="playing_card_back.jpg"/>
+	
+			<Label Grid.Row="2" Grid.Column="1" x:Name="_txtGameBoard" Text="Player Wins"/>	
+		
+		<Image x:Name="imgHouseCard" Grid.Row ="2" Grid.Column="2" Source="playing_card_back.jpg"/>
+		
+		<!--Label UI-->
+		<Label Grid.Row="3" Grid.Column ="0" Text = "Player" />
+		<Label Grid.Row="3" Grid.Column ="2" Text = "House" />
+		
+
+	</Grid>
 </ContentPage>
