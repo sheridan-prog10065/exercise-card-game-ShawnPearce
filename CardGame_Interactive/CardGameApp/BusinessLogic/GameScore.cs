@@ -2,19 +2,26 @@ namespace CardGameApp.BusinessLogic;
 
 public struct GameScore
 {
+    private int _playerScore;
     private int _houseScore;
-
+    
     public GameScore(int playerScore, int houseScore)
     {
-        PlayerScore = playerScore;
+        _playerScore = playerScore;
         _houseScore = houseScore;
     }
 
-    public int PlayerScore { get; set; }
+    public int PlayerScore
+    {
+        get { return _playerScore; }
+        
+        set { _playerScore = value; }
+    
+    }
 
     public int HouseScore
     {
-        get => PlayerScore;
-        set => PlayerScore = value;
+        get { return _playerScore; }
+        set { _playerScore = value; }
     }
 }

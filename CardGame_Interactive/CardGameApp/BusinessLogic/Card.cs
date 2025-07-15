@@ -2,17 +2,33 @@ namespace CardGameApp.BusinessLogic;
 
 public class Card
 {
-    public Card(byte value, CardSuit suit)
+    private byte _value;
+    private CardSuit _suit;
+
+public Card(byte value, CardSuit suit)
     {
-        Value = value;
-        Suit = suit;
+        _value = value;
+        _suit = suit;
+        
+    }
+    public byte Value
+    {
+        get { return _value; }
+        set { _value = value; }
+    }
+    public CardSuit Suit
+    {
+        get { return _suit; }
+        set { _suit = value; }
     }
 
-    public byte Value { get; set; }
+    public string CardName
+    {
+        get { return ""; }
+    }
 
-    public CardSuit Suit { get; set; }
-
-    public string CardName => "";
-
-    public string SuitName => "";
+    public string SuitName
+    {
+        get { return ""; }
+    }
 }
