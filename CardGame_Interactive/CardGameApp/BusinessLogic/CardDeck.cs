@@ -83,7 +83,7 @@ public class CardDeck
     public bool GetPairOfCards(out Card playerCard, out Card houseCard)
     {
         //Check that their are enough cards in the deck
-        if (_cardList.Count < 2)
+        if (_cardList.Count > 2)
         {
             //extract a random card from the deck
             int randPos = s_randomizer.Next(_cardList.Count);

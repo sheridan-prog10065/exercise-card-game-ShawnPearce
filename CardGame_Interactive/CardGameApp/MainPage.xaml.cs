@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
         _cardGame = new CardGame();
     }
 
-    private void onDealCards(object? sender, EventArgs e)
+    private void OnDealCards(object? sender, EventArgs e)
     {
        //Ask the game to deal the cards
        _cardGame.DealCards();
@@ -25,8 +25,13 @@ public partial class MainPage : ContentPage
        ShowCard(_imgHouseCard, houseCard);
     }
 
-    private void ShowCard(Image imgHouseCard, Card houseCard)
+    private void ShowCard(Image imageControl, Card card)
     {
-       //TODO: Implement showing hte card based on the vlaue and suit of the card
+     //Determine the name of the card based in its suit and value
+     char suitId = card.SuitName.ToLower()[0];
+     string fileName = $"{suitId}{card.Value.ToString("00")}.png";
+     
+     //show the card
+     imageControl.Source = ImageSource.FromFile(fileName);
     }
 }
