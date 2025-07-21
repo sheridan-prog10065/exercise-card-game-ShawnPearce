@@ -17,7 +17,7 @@
 		<Label Grid.Row="0" Grid.ColumnSpan="3" Text="Card Game" HorizontalOptions="Center" FontSize="50"  VerticalTextAlignment="Center"/>
 		
 		<!-- Game Buttons (Deal,Switch,Play)-->
-		<Button x:Name="_btnDealCards" Text="Deal" Grid.Row="1" Grid.Column="0" Margin="10" HeightRequest="50" WidthRequest="200"/>
+		<Button x:Name="_btnDealCards" Clicked="onDealCards" Grid.Row="1" Grid.Column="0" Margin="10" HeightRequest="50" WidthRequest="200"/>
 		<Button x:Name="_btnSwitchCards" Text="Switch" Grid.Row="1" Grid.Column="1" Margin="10" HeightRequest="50" WidthRequest="200"/>
 		<Button x:Name="_btnPlayCards" Text="Play" Grid.Row="1" Grid.Column="2" Margin="10" HeightRequest="50" WidthRequest="200"/>
 		

@@ -1,5 +1,7 @@
 
 
+using System.Diagnostics;
+
 namespace CardGameApp.BusinessLogic;
 
 public class CardGame
@@ -45,5 +47,13 @@ public class CardGame
     public bool IsOver
     {
         get { return false; }
+    }
+
+    public void DealCards()
+    {
+     //Ask the deck for two random cards
+     bool cardsDealt = _cardDeck.GetPairOfCards(out _playerCard, out _houseCard);
+     Debug.Assert(cardsDealt, "Failed to get pair of cards, Game over Card deck empty");
+
     }
 }
